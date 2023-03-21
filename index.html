@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Audi Website">
+    <title>Accueil | Audi.fr | Audi France</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand"><img src="logo.svg" alt="Audi logo" style="color: white;"></a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">Modèles</a>
+          <a href="#">Électrique et hybride</a>
+          <a href="#">Achat et location</a>
+          <a href="#">Votre Audi</a>
+          <a href="#">Univers Audi</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <div class="content">
+        <h1><span>Audi signe un nouveau record de vitesse</span></h1>
+        <p>Repousser les limites. Définir de nouveaux standards. Marquer l’histoire. Voilà ce qui nous pousse à développer une technologie capable de battre des records. Découvrez la performance en vidéo.</p>
+        <a href="#">Read More</a>
+      </div>
+    </section>
+    <section class="car-models">
+      <h2>Modèles</h2>
+      <div class="slider" id="slider">
+        <div class="slide" id="slide">
+          <div class="item">
+            <img src="2024.png">
+            <p style="color: black;">Audi Q8 e-tron</p>
+          </div>
+          <div class="item">
+            <img src="2024.png">
+            <p style="color: black;">Audi Q8 e-tron</p>
+          </div>
+          <div class="item">
+            <img src="2024.png">
+            <p style="color: black;">Audi Q8 e-tron</p>
+          </div>
+          <div class="item">
+            <img src="2024.png">
+            <p style="color: black;">Audi Q8 e-tron</p>
+          </div>
+          <div class="item">
+            <img src="2024.png">
+            <p style="color: black;">Audi Q8 e-tron</p>
+          </div>
+          <div class="item">
+            <img src="2024.png">
+            <p style="color: black;">Audi Q8 e-tron</p>
+          </div>
+          <div class="item">
+            <img src="2024.png">
+            <p style="color: black;">Audi Q8 e-tron</p>
+          </div>
+          <div class="item">
+            <img src="2024.png">
+            <p style="color: black;">Audi Q8 e-tron</p>
+          </div>
+          <div class="item">
+            <img src="2024.png">
+            <p style="color: black;">Audi Q8 e-tron</p>
+          </div>
+          <div class="item">
+            <img src="2024.png">
+            <p style="color: black;">Audi Q8 e-tron</p>
+          </div>
+        </div>
+        <button class="ctrl-btn pro-prev"><img width="20" src="previous.svg" alt=""></button>
+        <button class="ctrl-btn pro-next"><img width="20" src="next.svg" alt=""></button>
+      </div>
+    </section>
+    <section class="image-text">
+
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Cars Models Slider JS
+    productScroll();
+
+    function productScroll() {
+      let slider = document.getElementById("slider");
+      let next = document.getElementsByClassName("pro-next");
+      let prev = document.getElementsByClassName("pro-prev");
+      let slide = document.getElementById("slide");
+      let item = document.getElementById("slide");
+
+      for (let i = 0; i < next.length; i++) {
+        //refer elements by class name
+
+        let position = 0; //slider postion
+
+        prev[i].addEventListener("click", function() {
+          //click previos button
+          if (position > 0) {
+            //avoid slide left beyond the first item
+            position -= 1;
+            translateX(position); //translate items
+          }
+        });
+
+        next[i].addEventListener("click", function() {
+          if (position >= 0 && position < hiddenItems()) {
+            //avoid slide right beyond the last item
+            position += 1;
+            translateX(position); //translate items
+          }
+        });
+      }
+
+      function hiddenItems() {
+        //get hidden items
+        let items = getCount(item, false);
+        let visibleItems = slider.offsetWidth / 210;
+        return items - Math.ceil(visibleItems);
+      }
+    }
+
+    function translateX(position) {
+      //translate items
+      slide.style.left = position * -210 + "px";
+    }
+
+    function getCount(parent, getChildrensChildren) {
+      //count no of items
+      let relevantChildren = 0;
+      let children = parent.childNodes.length;
+      for (let i = 0; i < children; i++) {
+        if (parent.childNodes[i].nodeType != 3) {
+          if (getChildrensChildren)
+            relevantChildren += getCount(parent.childNodes[i], true);
+          relevantChildren++;
+        }
+      }
+      return relevantChildren;
+    }
+    </script>
+
+  </body>
+</html>
