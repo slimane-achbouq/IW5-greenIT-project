@@ -445,9 +445,35 @@ picture img {
   font-size: 0.4em;
 }
 
+@media (max-width: 800px) {
+  .home .content a.transparent {
+    display: flex;
+  }
+}
+
+@media (max-width: 800px) {
+  .home .content a {
+    display: flex;
+    margin-bottom: 2%;
+  }
+}
+
+@media (max-width: 800px) {
+  .text-detail {
+    position: absolute;
+    bottom: 0;
+    margin-right: 2%;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    top: 75%;
+  }
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;
+  margin-top: 2%;
 }
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
@@ -460,4 +486,62 @@ picture img {
 .flex-item {
   padding: 10px;
   flex: 33%;
+  border-right: 1px solid;
+}
+
+@media (max-width: 800px) {
+  .flex-item {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    margin: 0 auto;
+    width: 92%;
+    border-right: none;
+  }
+}
+
+.item-title-column {
+  display: flex;
+  font-weight: 700;
+  height: 60px;
+  justify-content: center;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.item-title-text {
+  align-self: flex-end;
+  font-weight: 700;
+}
+
+.number-title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 4.2rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.bloc-number-figure {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.number-figure {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.item-unit {
+  display: inline-block;
+  margin-bottom: 4px; 
+  margin-left: 6px; 
+  text-align: left;
+}
+
+.item-footer {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
 }
