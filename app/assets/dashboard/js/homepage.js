@@ -1,0 +1,1 @@
+new PerfectScrollbar(".app-container")
