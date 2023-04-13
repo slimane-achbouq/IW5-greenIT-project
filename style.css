@@ -351,3 +351,18 @@ section{
   width: 100%;
   height: 500px;
 }
+
+
+.home .content a.transparent {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.home .content a {
+  border: 2px solid white;
+}
+
+.home-detail {
+  z-index: -1;
+}
