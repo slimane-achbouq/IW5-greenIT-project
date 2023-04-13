@@ -1,9 +1,6 @@
 .idea
 docker-compose.yml.dist
-php
-nginx
 mysql
-
 
 ###> symfony/framework-bundle ###
 app/.env.local
