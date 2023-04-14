@@ -39,7 +39,7 @@
             {% for car in cars %}
             <div class="item">
                 <a aria-label="car page" href="{{ path('app_audi-Q7') }}">
-                    <img loading="lazy" alt="{{ car.title }}" src="{{ asset('upload/cars/' ~  car.image ) | imagine_filter('cars_slider') }}">
+                    <img loading="lazy" alt="{{ car.title }}" src="{{ asset('upload/cars/' ~  car.image ) }}">
                     <p style="color: black;">{{ car.title }}</p>
                 </a>
             </div>
