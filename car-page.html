@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Audi Website">
+    <title>Accueil | Audi.fr | Audi France</title>
+    <link rel="stylesheet" href="style-car-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <a href="#" class="brand"><img src="logo.svg" alt="Audi logo" style="color: white;"></a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">Modèles</a>
+          <a href="#">Électrique et hybride</a>
+          <a href="#">Achat et location</a>
+          <a href="#">Votre Audi</a>
+          <a href="#">Univers Audi</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <img src="car-page-background.jpg" alt="">
+      <div class="content">
+        <h1><span>Join The Jorney</span></h1>
+        <p>Leaner and meaner then ever. The new Audi Q8 e-tron goes where no car has gone before.</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="heading">
+          <h2>
+              Le plaisir de conduite électrique, <br />
+              dès la première seconde
+          </h2>
+          <p>
+            LʼAudi e-tron GT quattro est une véritable démonstration de lʼesprit dʼavant-garde qui anime Audi. Elle illumine dʼintensité, dʼexclusivité et de confort. Les sièges sport plus à lʼavant, avec appuie-tête intégrés, comportent également un rembourrage sur les côtés, pour offrir un excellent soutien latéral dans les virages et en cas de conduite plus intense.
+          </p>
+      </div>
+  </section>
+
+  <div class="banner-image">
+    <div class="img-wrapper">
+      <img src="car-banner.jpg" alt="Cinque Terre" width="100%" height="450px" style="object-fit: cover;">
+    </div>
+  </div>
+
+  <section class="about">
+    <div class="info">
+        <div class="info">
+            <img src="icon1.png" alt="icon" />
+            <div>
+                <h3>Agility</h3>
+                <p>Build for speed, with a 5.2 liter V10 engine</p>
+            </div>
+        </div>
+        <div class="info">
+            <img src="icon2.png" alt="icon">
+            <div>
+                <h3>Performance</h3>
+                <p>Accelerating from zero to 60 mph in 3.2s</p>
+            </div>
+        </div>
+        <div class="info">
+            <img src="icon3.png" alt="icon">
+            <div>
+                <h3>Cutting Edge</h3>
+                <p>
+                    Sharing half of its parts with the R8 LMS racecar
+                </p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="panels">
+    <div class="panels-sm">
+        <div class="panel">
+            <div>
+                <div class="icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h2>Power and speed unleashed</h2>
+                <a href="#">
+                    <span>Learn More</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel">
+            <div>
+                <div class="icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <h2>Respectful to environment</h2>
+            </div>
+        </div>
+    </div>
+    <div class="panel-lg"></div>
+  </section>
+
+  <section class="car-stats">
+    <div class="stats">
+        <div>
+            <h1 class="counter" data-target="206" data-speed="10">
+                0
+            </h1>
+            <h1>kmph</h1>
+            <h5>Top Speed</h5>
+        </div>
+        <div>
+            <h1 class="counter" data-target="7" data-speed="500">
+                0
+            </h1>
+            <h1>gears</h1>
+            <h5>Gear Box</h5>
+        </div>
+        <div>
+            <h1
+                class="counter"
+                data-target="473"
+                data-speed="1"
+            >0</h1>
+            <h1>hp</h1>
+            <h5>Horse Power</h5>
+        </div>
+    </div>
+    <div class="car">
+        <div class="circle">
+            <img src="car.png" alt="car">
+            <div class="inner-md-circle"></div>
+            <div class="inner-sm-circle"></div>
+        </div>
+    </div>
+</section>
+
+    <section class="footer">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <ul class="list">
+        <li>
+          <a href="#">Mentions légales</a>
+        </li>
+        <li>
+          <a href="#">Politique sur les cookies</a>
+        </li>
+        <li>
+          <a href="#">Politique de confidentialité</a>
+        </li>
+        <li>
+          <a href="#">Demande d'information</a>
+        </li>
+        <li>
+          <a href="#">Devis & RDV entretien en ligne</a>
+        </li>
+      </ul>
+      <p class="copyright">Slimane ACHBOUQ & Rina-Myriam HARROCH @ 2023</p>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    </script>
+
+  </body>
+</html>

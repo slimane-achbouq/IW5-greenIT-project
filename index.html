@@ -30,7 +30,7 @@
       <div class="content">
         <h1><span>Audi signe un nouveau record de vitesse</span></h1>
         <p>Repousser les limites. Définir de nouveaux standards. Marquer l’histoire. Voilà ce qui nous pousse à développer une technologie capable de battre des records. Découvrez la performance en vidéo.</p>
-        <a href="#">Read More</a>
+        <a class="read-more-btn" href="#">Read More</a>
       </div>
     </section>
     <section class="car-models">
@@ -82,9 +82,107 @@
         <button class="ctrl-btn pro-next"><img width="20" src="next.svg" alt=""></button>
       </div>
     </section>
-    <section class="image-text">
+    <div class="image-text">
+        <div class="image">
+          <img src="audi-a3.jpg">
+        </div>
+        <div class="text">
+          <h2>Audi A3 Sportback</h2>
+          <span>Conduite dynamique, allure de coupé intense et nombreuses innovations... profitez de nouvelles sensations à bord de la compacte iconique.</span>
+          <div class="btn-group">
+            <a class="btn-link" href="#">Configurer l'A3 Sportback</a>
+            <a class="btn-link-outline" href="#">Découvrir l’A3 Sportback</a>
+          </div>
+        </div>  
+    </div>
 
+    <div class="banner-image">
+      <span class="banner-image-title">Trouvez et réservez votre future Audi, parmi plus de 12 000 véhicules immédiatement disponibles</span>
+      <div class="img-wrapper">
+        <img class="lazy-loaded-image lazy" src="audi-a3-banner.jpg" alt="Cinque Terre" width="100%" height="650px" style="object-fit: cover;">
+      </div>
+      <div class="box">
+        <span class="title">Une innovation tournée vers le futur</span>
+        <span class="content">“Vorsprung durch Technik” est un état d’esprit chez Audi. Nous repoussons sans cesse les limites de l’innovation afin de vous faire vivre des sensations de conduite inédites.</span>
+        <a class="read-more-btn" href="#">Read More</a>
+      </div>
+    </div>
+
+    <section class="articles">
+      <span>Nos actualités</span>
+      <div class="card loading">
+          <div class="image">
+            
+          </div>
+          <div class="content">
+            <h4></h4>
+            <div class="description">
+              
+            </div>
+          </div>
+      </div>
+      <div class="card loading">
+        <div class="image">
+          
+        </div>
+        <div class="content">
+          <h4></h4>
+          <div class="description">
+            
+          </div>
+        </div>
+      </div>
+      <div class="card loading">
+        <div class="image">
+          
+        </div>
+        <div class="content">
+          <h4></h4>
+          <div class="description">
+            
+          </div>
+        </div>
+      </div>
+      <div class="card loading">
+        <div class="image">
+          
+        </div>
+        <div class="content">
+          <h4></h4>
+          <div class="description">
+            
+          </div>
+        </div>
+      </div>
     </section>
+
+    <footer class="footer">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <ul class="list">
+        <li>
+          <a href="#">Mentions légales</a>
+        </li>
+        <li>
+          <a href="#">Politique sur les cookies</a>
+        </li>
+        <li>
+          <a href="#">Politique de confidentialité</a>
+        </li>
+        <li>
+          <a href="#">Demande d'information</a>
+        </li>
+        <li>
+          <a href="#">Devis & RDV entretien en ligne</a>
+        </li>
+      </ul>
+      <p class="copyright">Slimane ACHBOUQ & Rina-Myriam HARROCH @ 2023</p>
+    </footer>
 
     <script type="text/javascript">
     //Javacript for responsive navigation menu
@@ -155,6 +253,23 @@
       }
       return relevantChildren;
     }
+
+
+
+    // lazy loading article images
+    var lazyImages = [].slice.call(document.querySelectorAll(".lazy-loaded-image.lazy"));
+    /** Then we set up a intersection observer watching over those images and whenever any of those becomes visible on the view then replace the placeholder image with actual one, remove the non-loaded class and then unobserve for that element **/
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            // alert('HELLO');
+          }
+        });
+    });
+    /** Now observe all the non-loaded images using the observer we have setup above **/
+    lazyImages.forEach(function(lazyImage) {
+        lazyImageObserver.observe(lazyImage);
+    });
     </script>
 
   </body>
