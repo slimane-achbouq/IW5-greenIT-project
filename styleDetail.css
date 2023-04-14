@@ -558,6 +558,7 @@ picture img {
 .text-left {
   text-align: left;
 }
+
 .element-left-image {
   display: flex;
   align-items: center;
