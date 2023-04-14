@@ -21,6 +21,8 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addStyleEntry('dashboard-tailwind', './assets/dashboard/css/app-tailwind.css')
+    .addStyleEntry('home-page-css', './assets/home-page.css')
+    .addStyleEntry('car-page-css', './assets/style-car-page.css')
 
 
 

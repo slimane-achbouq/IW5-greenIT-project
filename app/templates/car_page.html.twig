@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Audi Website">
+    <title>Audi Q7 | Audi.fr | Audi France</title>
+    {{ encore_entry_link_tags('car-page-css') }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <style>
+        .number-title {
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 4.2rem;
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+            margin-top: 3%;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            margin-top: 2%;
+        }
+
+        /* Responsive layout - makes a one column layout instead of a two-column layout */
+        @media (max-width: 800px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+
+        .flex-item {
+            padding: 10px;
+            flex: 33%;
+            border-right: 1px solid;
+        }
+
+        @media (max-width: 800px) {
+            .flex-item {
+                border-bottom: 1px solid rgba(0,0,0,.1);
+                margin: 0 auto;
+                width: 92%;
+                border-right: none;
+            }
+        }
+
+        .item-title-column {
+            display: flex;
+            font-weight: 700;
+            height: 60px;
+            justify-content: center;
+            margin-bottom: 18px;
+            overflow: hidden;
+        }
+
+        .item-title-text {
+            align-self: flex-end;
+            font-weight: 700;
+        }
+
+        .number-title {
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 4.2rem;
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+            margin-top: 3%;
+        }
+
+        .bloc-number-figure {
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        .number-figure {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .item-unit {
+            display: inline-block;
+            margin-bottom: 4px;
+            margin-left: 6px;
+            text-align: left;
+        }
+
+        .item-footer {
+            font-size: 1rem;
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+        }
+
+        .end {
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <a aria-label="Logo home page" href="#" class="brand"><img src="{{ asset('images/logo.svg') }}" alt="Audi logo" style="color: white;"></a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+        <div class="navigation-items">
+            <a aria-label="Home" href="#">Home</a>
+            <a aria-label="Modèles" href="#">Modèles</a>
+            <a aria-label="Électrique et hybride" href="#">Électrique et hybride</a>
+            <a aria-label="Achat et location" href="#">Achat et location</a>
+            <a aria-label="Votre Audi" href="#">Votre Audi</a>
+            <a aria-label="Univers Audi" href="#">Univers Audi</a>
+        </div>
+    </div>
+</header>
+
+<section class="home">
+    <picture>
+        <source type="image/webp" srcset="{{ asset('images/car-page-background.jpg') }}" alt="header background image">
+        <img src="{{ asset('images/car-page-background.jpg') }}" alt="header background image">
+    </picture>
+
+    <div class="content">
+        <h1><span>Join The Jorney</span></h1>
+        <p>Leaner and meaner then ever. The new Audi Q8 e-tron goes where no car has gone before.</p>
+    </div>
+</section>
+
+<section class="about">
+    <div class="heading">
+        <h2>
+            Le plaisir de conduite électrique, <br />
+            dès la première seconde
+        </h2>
+        <p>
+            LʼAudi e-tron GT quattro est une véritable démonstration de lʼesprit dʼavant-garde qui anime Audi. Elle illumine dʼintensité, dʼexclusivité et de confort. Les sièges sport plus à lʼavant, avec appuie-tête intégrés, comportent également un rembourrage sur les côtés, pour offrir un excellent soutien latéral dans les virages et en cas de conduite plus intense.
+        </p>
+    </div>
+</section>
+
+<div class="video-text">
+    <div class="video">
+        <video controls>
+            <source src="{{ asset('videos/q8.mp4') }}" {{ asset('videos/q8.mp4') }}>
+        </video>
+    </div>
+    <div class="text">
+        <h2>Audi Q8 e-tron</h2>
+        <span>Découvrez l'Audi Q8 TFSI e sous tous les angles</span>
+        <p>
+            Il affirme un style puissant avec sa calandre Singleframe octogonale en relief, ses entrées d’air proéminentes, ses ailes élargies, et ses jantes imposantes. De profil, la ligne de toit et le montant arrière plongeants lui confèrent une allure résolument sportive. Le pack Sport S line et ses nombreux équipements Sport renforcent cette identité dynamique. L’Audi Q8 60 TFSI e dispose de série des phares LED Matrix HD. Cette technologie combine les fonctionnalités d’une caméra, de sources lumineuses LED et de lentilles très précises pour une répartition adaptative de l’éclairage.
+        </p>
+    </div>
+</div>
+
+<section class="about">
+    <div class="info">
+        <div class="info">
+            <img src="{{ asset('images/icon1.png') }}" alt="icon" />
+            <div>
+                <h3>Agility</h3>
+                <p>Build for speed, with a 5.2 liter V10 engine</p>
+            </div>
+        </div>
+        <div class="info">
+            <img src="{{ asset('images/icon2.png') }}" alt="icon">
+            <div>
+                <h3>Performance</h3>
+                <p>Accelerating from zero to 60 mph in 3.2s</p>
+            </div>
+        </div>
+        <div class="info">
+            <img src="{{ asset('images/icon3.png') }}" alt="icon">
+            <div>
+                <h3>Cutting Edge</h3>
+                <p>
+                    Sharing half of its parts with the R8 LMS racecar
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="banner-image">
+    <div class="img-wrapper">
+        <img loading="lazy" src="{{ asset('images/car-banner.jpg') }}" alt="Cinque Terre" width="100%" height="450px" style="object-fit: cover;">
+    </div>
+</div>
+
+<div class="number-title">Chiffres clés</div>
+
+<div class="flex-container">
+    <div class="flex-item">
+        <p class="item-title-column">
+            <span class="item-title-text">Puissance</span>
+        </p>
+        <div class="bloc-number-figure">
+            <div class="number-figure">462</div>
+            <p class="item-unit">ch</p>
+        </div>
+        <p class="item-footer">(340 kW)</p>
+    </div>
+
+    <div class="flex-item">
+        <p class="item-title-column">
+            <span class="item-title-text">Accélération</span>
+        </p>
+        <div class="bloc-number-figure">
+            <div class="number-figure">5,4</div>
+            <p class="item-unit">s</p>
+        </div>
+        <p class="item-footer">De 0 à 100 km/h</p>
+    </div>
+
+    <div class="flex-item end">
+        <p class="item-title-column">
+            <span class="item-title-text">Autonomie électrique</span>
+        </p>
+        <div class="bloc-number-figure">
+            <div class="number-figure">Jusqu'à 46</div>
+            <p class="item-unit">km</p>
+        </div>
+        <p class="item-footer">Selon cycle WLTP</p>
+    </div>
+</div>
+
+<section class="car-stats">
+    <div class="car">
+        <div class="circle">
+            <img loading="lazy" src="{{ asset('images/car.png') }}" alt="car">
+            <div class="inner-md-circle"></div>
+            <div class="inner-sm-circle"></div>
+        </div>
+    </div>
+</section>
+
+<section class="panels">
+    <div class="panels-sm">
+        <div class="panel">
+            <div>
+                <div class="icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h2>Power and speed unleashed</h2>
+            </div>
+        </div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel">
+            <div>
+                <div class="icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <h2>Respectful to environment</h2>
+            </div>
+        </div>
+    </div>
+    <div class="panel-lg"></div>
+</section>
+
+<div style="background-color: #000; margin-top: 2%;">
+    <div>style="background-color: #000; margin-top: 2%;"
+        <div class="text-title text-left align-left color-white">
+            <span class="title">Un habitacle spacieux et raffiné</span>
+        </div>
+        <div class="text-container align-left color-white">
+            <div class="content-text text-left">À l’intérieur aussi, l’ambiance se veut résolument sportive. L’Audi Q8 TFSI e dévoile un habitacle Sport de série. Les équipements haut de gamme sont nombreux, tels que les sièges Sport réglables combinant alcantara et cuir à l’avant, et présentant un surpiquage S sur les dossiers. Avec son ADN sportif, ce SUV d’exception joue aussi la carte du confort intérieur et de l’espace. Son habitacle généreux peut accueillir confortablement cinq personnes et son coffre au plancher plat, facile à charger, affiche une capacité de 505 litres. Sa capacité passe à 1 625 litres lorsque la banquette arrière est rabattue.</div>
+        </div>
+    </div>
+
+    <picture >
+        <source srcset="{{ asset('images/audibg.avif') }}"
+                media="(orientation: portrait)">
+        <img src="{{ asset('images/audibg.avif') }}" alt="">
+    </picture>
+
+    <div class="element-left-image color-white">
+        <div class="element-right-text">
+            <div class="text-title title-left">
+                <span class="title">Le fleuron de la technologie Audi pour un haut niveau de confort</span>
+            </div>
+            <div class="text-container">
+                <div class="content-text text-left">L’Audi Q8 TFSI e réunit des technologies de pointe Audi, des matériaux et des finitions d'exception, pour vous assurer un confort de conduite inégalé. De série, elle est équipée du système MMI navigation plus avec MMI touch, de l’Audi connect et de l’Audi Virtual Cockpit avec un affichage spécifique aux modèles TFSI e. Ce dernier indique la puissance totale du système, le mode de conduite, ainsi que la charge de la batterie et l'autonomie restante. </div>
+            </div>
+        </div>
+
+        <picture class="img-left">
+            <source srcset="{{ asset('images/audiinterior.avif') }}"
+                    media="(orientation: portrait)">
+            <img src="{{ asset('images/audiinterior.avif') }}" alt="">
+        </picture>
+    </div>
+
+    <div class="element-left-image color-white">
+        <picture class="img-left">
+            <source srcset="{{ asset('images/audifalaise.avif') }}"
+                    media="(orientation: portrait)">
+            <img src="{{ asset('images/audifalaise.avif') }}" alt="">
+        </picture>
+
+        <div class="element-right-text">
+            <div class="text-title title-left">
+                <span class="title">"Si vous voulez un avenir meilleur, façonnez-le."</span>
+            </div>
+            <div class="text-container">
+                <div class="content-text text-left">Penser une nouvelle mobilité en progressant sans cesse, telle est la vision de Audi. Ralentir, réfléchir aux solutions qui façonneront un monde meilleur, certes à travers des innovations, mais surtout à travers une vision et un engagement qui perdureront dans le temps. </div>
+            </div>
+        </div>
+    </div>
+    <div class="color-white">
+        <div class="number-title">Un écosystème de charge complet, adapté à chacun de vos besoins</div>
+
+        <div class="flex-container">
+            <div class="flex-item">
+                <div class="bloc-number-figure">
+                    <div class="number-figure">À domicile</div>
+                    <p class="item-unit">Une borne de recharge individuelle.</p>
+                </div>
+            </div>
+
+            <div class="flex-item">
+                <div class="bloc-number-figure">
+                    <div class="number-figure">En ville</div>
+                    <p class="item-unit">Une borne de recharge en co-propriété.</p>
+                </div>
+            </div>
+
+            <div class="flex-item end">
+                <div class="bloc-number-figure">
+                    <div class="number-figure">Sur la route</div>
+                    <p class="item-unit">Des bornes disponibles dans toute l’Europe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="element-left-image color-white">
+        <picture class="img-left">
+            <source srcset="{{ asset('images/audienergie.avif') }}"
+                    media="(orientation: portrait)">
+            <img src="{{ asset('images/audienergie.avif') }}" alt="">
+        </picture>
+
+        <div class="element-right-text">
+            <div class="text-title title-left">
+                <span class="title">Audi Q8 TFSI e</span>
+            </div>
+            <div class="text-container">
+                <div class="content-text text-left">Consommation mixte : essence-Électrique : 2,2–2,7 l/100km.<br>
+                    Électrique : 23,7–25,2 kWh/100 km. <br>
+                    Émissions CO2 mixtes : 49–60 g/km.</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<section class="footer">
+    <div class="social">
+        <a aria-label="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a aria-label="instagram" href="#"><i class="fab fa-instagram"></i></a>
+        <a aria-label="youtube" href="#"><i class="fab fa-youtube"></i></a>
+        <a aria-label="twitter" href="#"><i class="fab fa-twitter"></i></a>
+        <a aria-label="linkedin" href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <ul class="list">
+        <li>
+            <a aria-label="Mentions légales" href="#">Mentions légales</a>
+        </li>
+        <li>
+            <a aria-label="Politique sur les cookies" href="#">Politique sur les cookies</a>
+        </li>
+        <li>
+            <a aria-label="Politique de confidentialité" href="#">Politique de confidentialité</a>
+        </li>
+        <li>
+            <a aria-label="Demande d'information" href="#">Demande d'information</a>
+        </li>
+        <li>
+            <a aria-label="Devis & RDV entretien en ligne" href="#">Devis & RDV entretien en ligne</a>
+        </li>
+    </ul>
+    <p class="copyright">Slimane ACHBOUQ & Rina-Myriam HARROCH @ 2023</p>
+</section>
+
+<script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+
+</script>
+
+</body>
+</html>

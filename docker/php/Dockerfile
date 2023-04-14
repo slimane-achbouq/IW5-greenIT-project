@@ -28,12 +28,14 @@ RUN docker-php-ext-install \
 
 RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql
 
+RUN ln -s /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
+RUN sed -i -e 's/;extension=pgsql/extension=pgsql/' /usr/local/etc/php/php.ini
+RUN sed -i -e 's/;extension=pdo_pgsql/extension=pdo_pgsql/' /usr/local/etc/php/php.ini
+
+
 RUN wget https://getcomposer.org/installer -O - | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN wget https://get.symfony.com/cli/installer -O - | bash && mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
-
-ADD php.ini /usr/local/etc/php/php.ini
-ADD php-fpm.conf /usr/local/etc/php-fpm.conf
 
 WORKDIR /var/www/app
 

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Audi Website">
+    <title>Accueil | Audi.fr | Audi France</title>
+    {{ encore_entry_link_tags('home-page-css') }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <a aria-label="audi logo home page" href="#" class="brand"><img src="{{ asset('images/logo.svg') }}" alt="Audi logo" style="color: white;"></a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+        <div class="navigation-items">
+            <a aria-label="Home" href="#">Home</a>
+            <a aria-label="Modèles" href="#">Modèles</a>
+            <a aria-label="Électrique et hybride" href="#">Électrique et hybride</a>
+            <a aria-label="Achat et location" href="#">Achat et location</a>
+            <a aria-label="Votre Audi" href="#">Votre Audi</a>
+            <a aria-label="Univers Audi" href="#">Univers Audi</a>
+        </div>
+    </div>
+</header>
+
+<section class="home">
+    <video class="video-slide active" src="{{ asset('videos/1.mp4') }}" autoplay muted loop></video>
+    <div class="content">
+        <h1><span>Audi signe un nouveau record de vitesse</span></h1>
+        <p>Repousser les limites. Définir de nouveaux standards. Marquer l’histoire. Voilà ce qui nous pousse à développer une technologie capable de battre des records. Découvrez la performance en vidéo.</p>
+    </div>
+</section>
+<section class="car-models">
+    <h2>Modèles</h2>
+    <div class="slider" id="slider">
+        <div class="slide" id="slide">
+            {% for car in cars %}
+            <div class="item">
+                <a aria-label="car page" href="{{ path('app_audi-Q7') }}">
+                    <img loading="lazy" alt="{{ car.title }}" src="{{ asset('upload/cars/' ~  car.image ) | imagine_filter('cars_slider') }}">
+                    <p style="color: black;">{{ car.title }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <button aria-label="previous" class="ctrl-btn pro-prev"><img width="20" src="{{ asset('images/previous.svg') }}" alt=""></button>
+        <button aria-label="next" class="ctrl-btn pro-next"><img width="20" src="{{ asset('images/next.svg') }}" alt=""></button>
+    </div>
+</section>
+<div class="image-text">
+    <div class="image">
+        <img src="{{ asset('images/audi-a3.jpg') }}" alt="audi a3">
+    </div>
+    <div class="text">
+        <h2>Audi A3 Sportback</h2>
+        <span>Conduite dynamique, allure de coupé intense et nombreuses innovations... profitez de nouvelles sensations à bord de la compacte iconique.</span>
+        <div class="btn-group">
+            <a aria-label="Configurer l'A3 Sportback" class="btn-link" href="#">Configurer l'A3 Sportback</a>
+            <a aria-label="Découvrir l’A3 Sportback" class="btn-link-outline" href="#">Découvrir l’A3 Sportback</a>
+        </div>
+    </div>
+</div>
+
+<div class="banner-image">
+    <span class="banner-image-title">Trouvez et réservez votre future Audi, parmi plus de 12 000 véhicules immédiatement disponibles</span>
+    <div class="img-wrapper">
+        <img type="image/webp" src="{{ asset('images/audi-a3-banner.jpg') }}" alt="Cinque Terre" width="100%" height="650px" style="object-fit: cover;">
+    </div>
+    <div class="box">
+        <span class="title">Une innovation tournée vers le futur</span>
+        <span class="content">“Vorsprung durch Technik” est un état d’esprit chez Audi. Nous repoussons sans cesse les limites de l’innovation afin de vous faire vivre des sensations de conduite inédites.</span>
+        <a aria-label="Read More" class="read-more-btn" href="#">Read More</a>
+    </div>
+</div>
+
+<section class="articles lazy-loaded-articles">
+    <span>Nos actualités</span>
+    <div class="card loading">
+        <div class="image">
+
+        </div>
+        <div class="content">
+            <h4></h4>
+            <div class="description">
+
+            </div>
+        </div>
+    </div>
+    <div class="card loading">
+        <div class="image">
+
+        </div>
+        <div class="content">
+            <h4></h4>
+            <div class="description">
+
+            </div>
+        </div>
+    </div>
+    <div class="card loading">
+        <div class="image">
+
+        </div>
+        <div class="content">
+            <h4></h4>
+            <div class="description">
+
+            </div>
+        </div>
+    </div>
+    <div class="card loading">
+        <div class="image">
+
+        </div>
+        <div class="content">
+            <h4></h4>
+            <div class="description">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="social">
+        <a aria-label="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a aria-label="instagram" href="#"><i class="fab fa-instagram"></i></a>
+        <a aria-label="youtube" href="#"><i class="fab fa-youtube"></i></a>
+        <a aria-label="twitter" href="#"><i class="fab fa-twitter"></i></a>
+        <a aria-label="linkedin" href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <ul class="list">
+        <li>
+            <a aria-label="Mentions légales" href="#">Mentions légales</a>
+        </li>
+        <li>
+            <a aria-label="Politique sur les cookies" href="#">Politique sur les cookies</a>
+        </li>
+        <li>
+            <a aria-label="Politique de confidentialité" href="#">Politique de confidentialité</a>
+        </li>
+        <li>
+            <a aria-label="Demande d'information" href="#">Demande d'information</a>
+        </li>
+        <li>
+            <a aria-label="Devis & RDV entretien en ligne" href="#">Devis & RDV entretien en ligne</a>
+        </li>
+    </ul>
+    <p class="copyright">Slimane ACHBOUQ & Rina-Myriam HARROCH @ 2023</p>
+</footer>
+
+<script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+
+    //Cars Models Slider JS
+    productScroll();
+
+    function productScroll() {
+        let slider = document.getElementById("slider");
+        let next = document.getElementsByClassName("pro-next");
+        let prev = document.getElementsByClassName("pro-prev");
+        let slide = document.getElementById("slide");
+        let item = document.getElementById("slide");
+
+        for (let i = 0; i < next.length; i++) {
+            //refer elements by class name
+
+            let position = 0; //slider postion
+
+            prev[i].addEventListener("click", function() {
+                //click previos button
+                if (position > 0) {
+                    //avoid slide left beyond the first item
+                    position -= 1;
+                    translateX(position); //translate items
+                }
+            });
+
+            next[i].addEventListener("click", function() {
+                if (position >= 0 && position < hiddenItems()) {
+                    //avoid slide right beyond the last item
+                    position += 1;
+                    translateX(position); //translate items
+                }
+            });
+        }
+
+        function hiddenItems() {
+            //get hidden items
+            let items = getCount(item, false);
+            let visibleItems = slider.offsetWidth / 210;
+            return items - Math.ceil(visibleItems);
+        }
+    }
+
+    function translateX(position) {
+        //translate items
+        slide.style.left = position * -210 + "px";
+    }
+
+    function getCount(parent, getChildrensChildren) {
+        //count no of items
+        let relevantChildren = 0;
+        let children = parent.childNodes.length;
+        for (let i = 0; i < children; i++) {
+            if (parent.childNodes[i].nodeType != 3) {
+                if (getChildrensChildren)
+                    relevantChildren += getCount(parent.childNodes[i], true);
+                relevantChildren++;
+            }
+        }
+        return relevantChildren;
+    }
+
+    // lazy loading article images
+    var lazyImages = [].slice.call(document.querySelectorAll(".lazy-loaded-articles"));
+    /** Then we set up a intersection observer watching over those images and whenever any of those becomes visible on the view then replace the placeholder image with actual one, remove the non-loaded class and then unobserve for that element **/
+    let lazyImageObserver = new IntersectionObserver(async function(entries, observer) {
+        let jsonResponse = async function() {
+            let response = await fetch('/api/articles', {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                },
+            });
+            return response.json();
+        }();
+        for (const entry of entries) {
+            if (entry.isIntersecting) {
+                let articles = await jsonResponse;
+
+                entry.target.querySelectorAll('.card').forEach(function (card, index) {
+                    let article = articles[index];
+                    if (!article) {
+                        return;
+                    }
+                    let articleImageUrl = "{{ asset('upload/articles/') }}" + article.image;
+                    card.querySelector('.image').innerHTML = "<img src='" + articleImageUrl + "' alt='" + article.title + "'>"
+                    card.querySelector('.content h4').innerText = article.title;
+                    card.querySelector('.content .description').innerText = article.description
+                    card.classList.remove('loading');
+                })
+                lazyImageObserver.unobserve(entry.target);
+            }
+        }
+    });
+    /** Now observe all the non-loaded images using the observer we have setup above **/
+
+
+    for (const lazyImage of lazyImages) {
+        lazyImageObserver.observe(lazyImage);
+    }
+</script>
+
+</body>
+</html>

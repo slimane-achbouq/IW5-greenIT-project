@@ -2,17 +2,14 @@ version: '3.7'
 services:
   database:
     container_name: database
-    image: mysql:8.0
-    command: --default-authentication-plugin=mysql_native_password
+    image: postgres
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: slachroot
-      MYSQL_DATABASE: greenit
-      MYSQL_USER: slach
-      MYSQL_PASSWORD: slach
+      POSTGRES_USER: slach
+      POSTGRES_PASSWORD: slach
+      POSTGRES_DB: greenit
     ports:
-      - '4306:3306'
-    volumes:
-      - ./mysql:/var/lib/mysql
+      - '5432:5432'
   php:
     container_name: php
     build: './docker/php'
